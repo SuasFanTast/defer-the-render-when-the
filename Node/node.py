@@ -9,14 +9,6 @@ import subprocess
 
 
 
-"""
-# Node configuration
-blender_paths = ["/home/sergei/New Folder/bilshut_Locale/~~Spring2025/DB/ExperimentV3/Node/blender-4.4.3-linux-x64/blender"]  # Placeholder for Blender paths
-render_out_paths = []
-HARDWARE_CONFIG = {}
-SOFTWARE_CONFIG = {}
-"""
-
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.json')
 
@@ -468,47 +460,3 @@ if __name__ == "__main__":
     client = Client()
     client.start()
 
-
-"""import requests
-import threading
-from time import sleep
-import os
-
-blender_paths = []
-
-#netcode
-class Client:
-    def __init__(self, host='http://127.0.0.1:6969'):
-        self.host = host
-        self.id = id
-        
-
-    def exchange(self):
-        files = None
-        #files = {
-        #    'file': open(file_path, 'rb')
-        #}
-        data = {
-            'id': self.id
-            
-        }
-        try:
-            response = requests.post(
-                f"{self.host}/api2",
-               # files=files,
-                data=data
-            )
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            return {'error': str(e)}
-         
-    
-
-
-if __name__ == "__main__":
-    cl = Client()
-    print("i am node")
-    print(cl.exchange())
-
-
-    """
